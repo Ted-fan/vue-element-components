@@ -1,0 +1,80 @@
+.form-info-text {
+  font-size: 15px;
+}
+
+.band {
+  background: #F3F3F3;
+  height: 6px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.margin-top-m15 {
+  margin-top: -15px;
+}
+
+.aq-invisible-input {
+  width: 250px;
+  // display: none;
+}
+
+.aq-search-text {
+  font-size: 12px;
+  color: #0F327D;
+  padding-left: 8px;
+}
+
+.aq-search-button {
+  min-width: 84px;
+  margin-top: 30px;
+}
+
+$customColors: (primary, #ffffff, #0E327D, #0F327D),
+(warning, #ffffff, #ffba00, #ffc833);
+
+@each $customColorName,
+$customTextColor,
+$customNormalColor,
+$customHoverColor in $customColors {
+  .aq-#{$customColorName}-button {
+    color: $customTextColor;
+    border-color: $customNormalColor;
+    background-color: $customNormalColor;
+  }
+
+  .aq-#{$customColorName}-button:hover {
+    color: $customTextColor;
+    border-color: $customHoverColor;
+    background-color: $customHoverColor;
+  }
+}
+
+$textColors: (primary, #409EFF),
+(danger, #ff4949),
+(success, #67C23A),
+(band, #F3F3F3),
+(info, #0E327D),
+(warning, #FA8C16),
+(bg-success, #edf9e8),
+(bg-warning, #fef3e7),
+(bg-danger, #fee8ea);
+
+@each $customColorName,
+$customColor in $textColors {
+  .aq-text-color-#{$customColorName} {
+    color: $customColor !important;
+  }
+
+  .aq-border-color-#{$customColorName} {
+    border-color: $customColor !important;
+  }
+
+  .aq-bg-color-#{$customColorName} {
+    background: $customColor !important;
+    background-color: $customColor !important;
+  }
+}
+
+.el-link--inner {
+  text-decoration: underline;
+}

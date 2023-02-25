@@ -1,0 +1,36 @@
+.djs-palette.open {
+  .djs-palette-entries {
+    div[class^="bpmn-icon-"]:before,
+    div[class*="bpmn-icon-"]:before {
+      line-height: unset;
+    }
+    div.entry {
+      position: relative;
+    }
+    div.entry:hover {
+      &::after {
+        width: max-content;
+        content: attr(title);
+        vertical-align: text-bottom;
+        position: absolute;
+        right: -10px;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        transform: translateX(100%);
+        font-size: 0.5em;
+        display: inline-block;
+        text-decoration: inherit;
+        font-variant: normal;
+        text-transform: none;
+        background: #fafafa;
+        box-shadow: 0 0 6px #eeeeee;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+        padding: 0 16px;
+        border-radius: 4px;
+        z-index: 100;
+      }
+    }
+  }
+}

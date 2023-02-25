@@ -1,0 +1,310 @@
+.aq-width-full {
+  width: 100% !important;
+}
+
+.aq-height-full {
+  height: 100% !important;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.aq-flex {
+  display: flex;
+}
+
+// 行内垂直居中
+.aq-vertical-between {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+// 行内垂直居中
+.aq-vertical-center {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+// 行内垂直居中元素居右
+.aq-vertical-end {
+  display: flex;
+  align-items: center !important;
+  justify-content: flex-end !important;
+}
+
+// 行内水平 & 垂直居中
+.aq-vertical-middle {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.aq-vertical-bottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+// flex 居右
+.flex-end {
+  justify-content: flex-end !important;
+  -webkit-justify-content: flex-end !important;
+  -moz-justify-content: flex-end !important;
+}
+
+// 显示块元素
+.aq-block {
+  display: block;
+}
+
+// 显示行内块元素
+.aq-inline-block {
+  display: inline-block;
+}
+
+// 隐藏元素
+.aq-none {
+  display: none;
+}
+
+// 隐藏元素
+.aq-unvisible {
+  visibility: hidden;
+}
+
+// 相对定位
+.aq-relative {
+  position: relative;
+}
+
+// 固定定位
+.aq-fixed {
+  position: fixed;
+}
+
+// 绝对定位跟相对定位成对使用
+.aq-absolute {
+  position: absolute;
+}
+
+// 手动增加滚动条
+.aq-scroll {
+  overflow: scroll;
+}
+
+// 圆形
+.aq-circle {
+  border-radius: 50%;
+}
+
+// 圆角 1~10
+@for $i from 1 through 15 {
+  .aq-radius-#{$i} {
+    border-radius: 1px * $i !important;
+  }
+}
+
+// svg 图标和图片图标的宽和高 8, 12, 16, 20, 24, 28, 32 ... 100
+@for $i from 8 through 100 {
+  @if $i%4==0 {
+    .aq-icon-#{$i} {
+      width: 1px * $i !important;
+      height: 1px * $i !important;
+    }
+  }
+}
+
+@for $i from 2 through 10 {
+  @if $i%2==0 {
+    .aq-letter-space-#{$i} {
+      letter-spacing: 1px * $i !important;
+    }
+  }
+}
+
+// padding 上下左右 4 ~64
+$padding-list: "padding",
+"padding-top",
+"padding-bottom",
+"padding-left",
+"padding-right",
+"padding-horizontal";
+
+@each $padding in $padding-list {
+  @for $i from 0 through 64 {
+    @if $padding=='padding-horizontal' {
+      .aq-#{$padding}-#{$i} {
+        padding-left: 1px * $i !important;
+        padding-right: 1px * $i !important;
+      }
+    }
+
+    @else if $padding !='padding-horizontal'and $i%4==0 {
+      .aq-#{$padding}-#{$i} {
+        #{$padding}: 1px * $i !important;
+      }
+    }
+  }
+}
+
+// margin 上下左右4~64
+$margin-list: "margin",
+"margin-top",
+"margin-bottom",
+"margin-left",
+"margin-right",
+"margin-vertical";
+
+@each $margin in $margin-list {
+  @for $i from 0 through 64 {
+    @if $margin=='margin-vertical' {
+      .aq-#{$margin}-#{$i} {
+        margin-top: 1px * $i !important;
+        margin-bottom: 1px * $i !important;
+      }
+    }
+
+    @else if $margin !='margin-vertical'and $i%4==0 {
+      .aq-#{$margin}-#{$i} {
+        #{$margin}: 1px * $i !important;
+      }
+    }
+  }
+}
+
+.aq-text-weight-medium {
+  font-weight: 500;
+}
+
+.aq-text-weight-bolder {
+  font-weight: 900;
+}
+
+// 特号字体大小
+.aq-text-size-xsmall {
+  font-size: 10px !important;
+}
+
+// 小号字体大小
+.aq-text-size-small {
+  font-size: 12px !important;
+}
+
+// 正常字体大小，默认不需要设置
+.aq-text-size-normal {
+  font-size: 14px !important;
+}
+
+// 中号字体大小
+.aq-text-size-medium {
+  font-size: 16px !important;
+}
+
+// 大号字体大小
+.aq-text-size-big {
+  font-size: 20px !important;
+}
+
+//超大号字体
+.aq-text-size-large {
+  font-size: 24px !important;
+}
+
+// 最大号字体大小
+.aq-text-size-xlarge {
+  font-size: 30px !important;
+}
+
+// 超长显示省略号
+.aq-text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.aq-text-overflow {
+  overflow-x: auto;
+  text-overflow: inherit;
+  white-space: nowrap;
+}
+
+// 默认border宽度
+.aq-border {
+  border: 1px solid !important;
+}
+
+// 默认border top
+.aq-border-top {
+  border-top: 1px solid !important;
+}
+
+// 默认border bottom
+.aq-border-bottom {
+  border-bottom: 1px solid !important;
+}
+
+// 默认border left
+.aq-border-left {
+  border-left: 1px solid !important;
+}
+
+// 默认border right
+.aq-border-right {
+  border-right: 1px solid !important;
+}
+
+@for $i from 0 through 4 {
+  .aq-border-width-#{$i} {
+    border-width: 1px * $i !important;
+  }
+}
+
+.aq-row-wrap {
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+// 清除背景
+.aq-background-none {
+  background: none;
+}
+
+// 清楚border
+.clear-border {
+  border: 0 !important;
+}
+
+// 透明度为0
+.opacity-0 {
+  opacity: 0;
+}
+
+.font-weight {
+  font-weight: bold;
+}
+
+.aq-pointer {
+  cursor: pointer;
+}
+
+.empty-css {
+  border: 1px solid #f5222d;
+  border-radius: 4px;
+}
+.placeholder {
+  color: #ccc4cc;
+}

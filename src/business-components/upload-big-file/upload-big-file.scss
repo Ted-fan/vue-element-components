@@ -1,0 +1,34 @@
+.uploader-ui {
+  // padding: 15px;
+  margin: 0px auto 0;
+  font-size: 12px;
+  font-family: Microsoft YaHei;
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.uploader-ui .uploader-btn {
+  margin-right: 4px;
+  font-size: 12px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.uploader-ui .uploader-list {
+  max-height: 440px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+::v-deep .uploader-file {
+  margin-left: 16px;
+}
+
+/* ::v-deep .uploader-file-actions {
+  display: none;
+} */

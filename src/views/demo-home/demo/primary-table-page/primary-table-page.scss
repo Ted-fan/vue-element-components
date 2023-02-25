@@ -1,0 +1,7 @@
+::v-deep .el-form-item {
+  margin-bottom: 0px;
+}
+
+::v-deep .el-form-item--medium .el-form-item__content {
+  line-height: 28px !important;
+}

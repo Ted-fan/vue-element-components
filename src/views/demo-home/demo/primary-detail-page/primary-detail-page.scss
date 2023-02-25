@@ -1,0 +1,13 @@
+::v-deep .el-form-item {
+  margin-bottom: 0px;
+}
+
+::v-deep .el-form-item--medium .el-form-item__content {
+  line-height: 28px !important;
+}
+
+::v-deep .el-divider--vertical {
+  width: 4px;
+  background: #0F327D;
+  margin: 0px 8px 0px 0px;
+}

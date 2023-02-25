@@ -1,0 +1,93 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './global.scss';
+@import './common.scss';
+@import './bpmn.scss';
+@import './org-tree.scss';
+
+@font-face {
+  font-family: 'PingFangSC';
+  src: url('../assets/fonts/PingFang-SC-Regular.otf');
+}
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: 'PingFangSC' !important;
+}
+
+button span {
+  font-family: 'PingFangSC' !important;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// 分页放到右侧
+.pagination {
+  margin-top: 20px;
+  text-align: right;
+}
+
+// 搜索区域
+.search-container {
+  padding: 16px 16px 0px;
+}
+
+.content-container {
+  padding: 16px 16px 24px;
+}
+
+.cad-container {
+  width: 100%;
+  height: 100vh;
+}
